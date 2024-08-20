@@ -17,6 +17,13 @@
 
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/11a5d7d83e.js" crossorigin="anonymous"></script>
+
+    <!-- css --> 
+     <style>
+           .carousel {
+            transition: transform 0.5s ease-in-out;
+        }
+     </style>
 </head>
 <body class="font-Jost">
     
@@ -44,11 +51,26 @@
         </nav>
     </header>
 
-    <header>
+    <header class="flex justify-center mt-10">
 
-        <div class="mt-5">
-            <img src="src/assets/img/Property 1=Frame 1.png" alt="">
+        <div class=" overflow-hidden relative">
+            <!-- Carousel container -->
+            <div id="carousel" class="flex carousel">
+                <!-- Slide 1 -->
+                <div class="min-w-full">
+                    <img src="src/assets/img/Property 1=Frame 1.png" alt="Slide 1" class="">
+                </div>
+                <!-- Slide 2 -->
+                <div class="min-w-full">
+                    <img src="src/assets/img/Property 1=Frame 2.png" alt="Slide 2" class="">
+                </div>
+                <!-- Slide 3 -->
+                <div class="min-w-full">
+                    <img src="src/assets/img/Property 1=Frame 3.png" alt="Slide 3" class="">
+                </div>
+            </div>
         </div>
+    
 
     </header>
 
@@ -199,5 +221,21 @@
 
   </footer>
 
+  <script>
+
+        let currentIndex = 0;
+        const carousel = document.getElementById('carousel');
+        const slides = carousel.children;
+        const totalSlides = slides.length;
+
+        function showNextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            const offset = -currentIndex * 100;
+            carousel.style.transform = `translateX(${offset}%)`;
+        }
+
+        setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+
+  </script>
 </body>
 </html>
