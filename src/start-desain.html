@@ -17,7 +17,7 @@
         <header class="mt-16 font-Jost mx-8">
             <nav class="flex justify-between">
                 <div>
-                    <a href="/index.html"><img src="assets/img/logo 1.png" alt=""></a>
+                    <a href="../index.html"><img src="assets/img/logo 1.png" alt=""></a>
                 </div>
     
                 <div>
@@ -40,10 +40,12 @@
         <main class="flex gap-10 mt-5">
 
             <div class="w-1/2 flex justify-end" id="shirt">
-                <img src="assets/img/startdesain/Mask group (2).png" alt="">
+                <img src="assets/img/startdesain/Mask group (2).png" alt="" id="blackShirt" class="">
+                <img src="assets/img/startdesain/Mask group (3).png" alt="" id="blueShirt" class="hidden">
+                <img src="assets/img/startdesain/Mask group (4).png" alt="" id="grayShirt" class="hidden">
             </div>
 
-            <div class="w-1/2 flex flex-col">
+            <div class="w-1/2 flex flex-col pl-5">
                 <div class="bg-[#F1F1F1] w-48 h-20 rounded-full flex justify-center items-center gap-6"> 
                     <i class="fa-solid fa-shirt text-5xl"></i>
                     <a href=""><i class="fa-regular fa-floppy-disk text-5xl"></i></a>
@@ -57,9 +59,9 @@
                             <h3 class="mb-3 text-sm font-semibold">Color</h3>
                             
                             <ul class="flex gap-3">
-                                <li><a href=""><button class="bg-black rounded-full w-5 h-5" id="black"></button></a></li>
-                                <li><a href=""><button class="bg-[#414141] rounded-full w-5 h-5"></button></a></li>
-                                <li><a href=""><button class="bg-[#0A0C3B] rounded-full w-5 h-5"></button></a></li>
+                                <li><button class="bg-black rounded-full w-5 h-5" onclick="blackShirt()"></button></li>
+                                <li><button class="bg-[#414141] rounded-full w-5 h-5" onclick="blueShirt()"></button></li>
+                                <li><button class="bg-[#0A0C3B] rounded-full w-5 h-5" onclick="grayShirt()"></button></li>
                             </ul>
                         </div>
     
@@ -70,17 +72,17 @@
                         </div>
     
                         <div class="">
-                            <h3 class="font-semibold text-sm">Description</h3>
+                            <h3 class="font-semibold text-sm mb-3">Description</h3>
     
-                            <ul class="list-disc">
+                            <ul class="list-disc font-light text-xs leading-loose pl-4">
                                 <li>Bahan Cotton Premium</li>
                                 <li>Berat 180g</li>
                                 <li>Hight Quality</li>
                                 <li>Made In Indonesia</li>
-                                <li>Bahannya lembut, adem, menyerap keringat dan warna tidak mudah pudar serta jahitan baju super rapi dari leher sampai ke seluruh baju </li>
+                                <li class="w-36">Bahannya lembut, adem, menyerap keringat dan warna tidak mudah pudar serta jahitan baju super rapi dari leher sampai ke seluruh baju </li>
                             </ul>
     
-                            <h3>Stay With Local Brands</h3>
+                            <h3 class="mt-8 text-base font-medium">Stay With Local Brands</h3>
                         </div>
     
                 </div>
@@ -122,5 +124,28 @@
       </footer>
     
     
+
+    <script>
+
+        function blackShirt() {
+            document.getElementById("blackShirt").style.display = "block";
+            document.getElementById("blueShirt").style.display = "none";
+            document.getElementById("grayShirt").style.display = "none";
+        };
+
+        function blueShirt() {
+            document.getElementById("blackShirt").style.display = "none";
+            document.getElementById("blueShirt").style.display = "block";
+            document.getElementById("grayShirt").style.display = "none";
+        }
+
+        function grayShirt() {
+            document.getElementById("blackShirt").style.display = "none";
+            document.getElementById("blueShirt").style.display = "none";
+            document.getElementById("grayShirt").style.display = "block";
+        }
+
+    </script>
+
 </body>
 </html>
