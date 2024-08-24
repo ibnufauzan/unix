@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <header>
+        <button class="" onmouseover="dropdown()" onclick="backdropdown()">Cart</button>
+    </header>
+    
+    <section class="bg-slate-500 w-1/4 hidden" id="cart">
+
+        <h1>Your Cart</h1>
+
+        <h3>You have Six items in the cart</h3>
+
+        <div class="flex flex-wrap justify-center">
+            <div class="">
+                <img src="assets/img/cart/unsplash_Groi0xH25-o.png" alt="" class="rounded-lg mt-2">
+                <h2>UNIX Apparel T-Shirt</h2>
+                <h3>RP. 150.000</h3>
+                <div class="">
+                    <img src="assets/img/Star 21.png" alt="">
+                    <img src="assets/img/Star 21.png" alt="">
+                    <img src="assets/img/Star 21.png" alt="">
+                    <img src="assets/img/Star 21.png" alt="">
+                    <img src="assets/img/Star 21.png" alt="">
+                </div>
+                <button type="button"><a href="save.html"></a></button>
+            </div>
+    
+            <div class="">
+                <img src="assets/img/cart/Mask group (2).png" alt="">
+                <h2>UNIX Apparel T-Shirt</h2>
+                <h3>RP. 150.000</h3>
+                <div class="">
+                    <img src="assets/img/Star 21.png" alt="">
+                    <img src="assets/img/Star 21.png" alt="">
+                    <img src="assets/img/Star 21.png" alt="">
+                    <img src="assets/img/Star 21.png" alt="">
+                    <img src="assets/img/Star 21.png" alt="">
+                </div>
+
+                <button type="submit"><a href="save.html">Keranjang</a></button>
+            </div>
+    
+            <div class="">
+                <img src="assets/img/cart/Mask group (3).png" alt="">
+            </div>
+    
+            <div class="">
+                <img src="assets/img/cart/Mask group (4).png" alt="">
+            </div>
+        </div>
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit a quas obcaecati incidunt asperiores quod maiores beatae magni est neque.
+    </section>
+
+    <script>
+
+        function dropdown() {
+            const cart = document.getElementById("cart");
+
+            cart.style.display = "block"
+        }
+
+        function backdropdown() {
+            const cart = document.getElementById("cart");
+            cart.style.display = "none";
+        }
+
+    </script>
+</body>
+</html>
